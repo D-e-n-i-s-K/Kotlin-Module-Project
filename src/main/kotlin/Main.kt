@@ -54,8 +54,6 @@ class MenuCreateNote (private val key: Int) : CreateInterface {
         println(title)
         tempData = menu.getUserInput()
         NoteArchiveCollection.noteArchiveCollection[key]!!.addToNoteArchive(tempData)
-//        println("Создана заметка: ")
-//        println(tempData)
         backToMenu.invoke()
     }
 }
@@ -149,9 +147,7 @@ class MenuViewNote (val key: Int, val text: String) : CreateInterface {
 
 data class Note (
     val name: String
-    //val textOfNote: String
 ) {
-
 }
 
 class NoteArchive(
